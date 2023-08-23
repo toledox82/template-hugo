@@ -1,0 +1,33 @@
+// Fonts
+$font-title: 'Philosopher', serif;
+$font-text: 'Fira Sans', Arial, sans-serif;
+
+// Base Colors
+$white: #FFFFFF;
+$black: #000000;
+$red: #FF5555;
+$grey: #353C44;
+$grey-light: #6D747D;
+$grey-lighter: #A3AEBA;
+$grey-lightest: #EDEEEF;
+
+// Custom Colors
+$green: #016237;
+$green-light: #009654;
+$green-dark: #004426;
+$green-lighter: #81C5A6;
+$orange: #EC8304;
+$yellow: #fed501;
+
+$primary: $green;
+$secondary: $green-light;
+$accent: $orange;
+
+// Style
+$radius: 2em;
+$shadow: 0 5px 15px rgba(0,0,0,.2);
+$shadow-hover: 0 5px 25px rgba(0, 150, 84,.5);
+$text-shadow: 2px 2px 3px rgba(0,0,0,.2);
+
+// Other
+$test: 1px solid $red;

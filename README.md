@@ -1,0 +1,2 @@
+# Template Hugo from Scratch
+

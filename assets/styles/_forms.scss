@@ -1,0 +1,45 @@
+// Form
+fieldset {
+  padding: 0;
+  border: none;
+}
+label {
+  display: block;
+  font-size: 1rem;
+  color: $primary;
+}
+
+input,
+textarea,
+select {
+  font-family: $font-text;
+  width: 100%;
+  margin-bottom: 1.5rem;
+  padding: 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: $primary;  
+  border: 1px solid $green-lighter;
+  outline: none;
+
+  &.invalid {
+    border-color: $red;
+    box-shadow: 0 0 1px $red;
+  }
+
+  &:active,
+  &:focus {
+    border-color: $secondary;
+  }
+}
+
+textarea {
+  font-size: 1.2rem;
+  height: auto;
+  min-height: 6rem;
+  resize: vertical;
+}
+
+::placeholder {
+  color: $grey-lighter;
+}

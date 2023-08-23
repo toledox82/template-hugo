@@ -1,0 +1,7 @@
+{{ $options := (dict "transpiler" "libsass" "outputStyle" "compressed" )}}
+{{ if eq hugo.Environment "development" }}
+  {{ $options = (dict "transpiler" "libsass" "enableSourceMap" true )}}
+{{ end }}
+{{ $css := resources.Get . }}
+{{ $css := $css | toCSS $options }}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}?v={{ now.Format "20060102" }}">

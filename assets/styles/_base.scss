@@ -1,0 +1,105 @@
+html {
+  font-family: $font-text;
+  font-size: 16px;
+}
+
+body {
+  background: $white;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: $font-title;
+  line-height: .85em;
+  margin-bottom: .5em;
+}
+
+h1 { font-size: 3.4rem; font-weight: normal; letter-spacing: -.1rem; }
+h2 { font-size: 3rem; font-weight: normal; letter-spacing: -.1rem; }
+h3 { font-size: 1.75rem; letter-spacing: -.05rem; }
+h4 { font-size: 1.5rem; letter-spacing: -.05rem; }
+h5 { font-size: 1.25rem }
+h6 { font-size: 1rem }
+
+@include mobile {
+  h1 { font-size: 2.4rem }
+  h2 { font-size: 2.0rem }
+  h3 { font-size: 1.5rem }
+  h4 { font-size: 1.25rem }
+  h5 { font-size: 1.1rem }
+  h6 { font-size: 0.9rem }
+}
+
+main {
+  overflow-x: hidden;
+  
+  p,li {
+    font-size: 1.125rem;
+    line-height: 1.625;
+  
+    @include mobile {
+      font-size: 1rem;
+    }
+  }  
+
+  ul {
+    padding:0;
+    list-style: none;
+  }
+
+  p + p {
+    margin-top: 2rem;
+  }
+
+  img {
+    animation: 1s fadein;
+  }
+}
+
+a {
+  color: $primary;
+  text-decoration: none;
+
+  p &,
+  small & {
+    border-bottom: 1px solid transparent;
+
+    &:hover {
+      border-color: $primary;
+    }
+  }
+}
+
+a,
+button,
+path {
+  transition: color ease .5s, opacity ease .5s, background-color ease .5s, border-color ease .5s, fill ease .5s;
+}
+
+.preload-transitions a,
+.preload-transitions button
+.preload-transitions path {
+  // Dry this up a bit with SCSS variable
+  $null-transition: none !important;
+
+  -webkit-transition: $null-transition;
+  -moz-transition: $null-transition;
+  -ms-transition: $null-transition;
+  -o-transition: $null-transition;
+  transition: $null-transition;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+img {
+  align-self: center;
+}
+
+// Effects
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+}

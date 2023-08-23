@@ -1,0 +1,17 @@
+baseURL = ""
+languageCode = "en"
+title = ""
+[params]
+  tagline = ""
+  description = ""
+  images = ['/images/opengraph.png']
+  phone = ""
+  whatsapp = ""
+  email = ""
+  instagram = ""
+  facebook = ""
+  youtube = ""
+  googleanalytics = ""
+
+#[markup.goldmark.renderer]
+ # unsafe = true # Allow HTML in md files

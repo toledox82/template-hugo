@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="{{ site.LanguageCode | default "pt-br" }}">
+    <head>
+      {{ with .Site.Params.googleanalytics }}
+      <script async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());+
+        gtag('config', '{{ . }}');
+      </script>
+      {{ end }}
+      {{ partial "head.html" . }}
+    </head>
+    <body class="preload-transitions"
+      x-data="{}"
+      x-init="() => {
+        $el.classList.remove('preload-transitions');
+      }">
+      {{ partial "header.html" . }}
+      <main>
+        {{ block "main" . }}{{ end }}
+      </main>
+      {{ partial "footer.html" . }}
+      {{ partial "scripts" "scripts/main.js" . }}
+    </body>
+</html>
