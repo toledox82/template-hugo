@@ -1,6 +1,7 @@
 baseURL = ""
 languageCode = "en"
 title = ""
+disableKinds = ["taxonomy"]
 [params]
   tagline = ""
   description = ""
